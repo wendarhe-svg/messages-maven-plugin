@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yto.ylp.maven.plugin</groupId>
-    <artifactId>messages-plugin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.github.wendarhe-svg</groupId>
+    <artifactId>messages-maven-plugin</artifactId>
+    <version>1.0</version>
     <packaging>maven-plugin</packaging>
 
     <properties>
@@ -71,6 +71,15 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
                 <version>3.9.0</version>
+                <executions>
+                    <execution>
+                        <id>default-descriptor</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>descriptor</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
